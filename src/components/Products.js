@@ -16,11 +16,11 @@ export default class Products extends PureComponent {
   componentDidMount() {
     this.setState(prevState => ({
       products: [
-        { id: 'a1', name: "Товар 1", price: 1000 },
-        { id: 'a2', name: "Товар 2", price: 2000 },
-        { id: 'a3', name: "Товар 3", price: 3000 },
-        { id: 'a4', name: "Товар 4", price: 4000 },
-        { id: 'a5', name: "Товар 5", price: 5000 },
+        { id: '1', name: "Товар 1", price: 1000 },
+        { id: '2', name: "Товар 2", price: 2000 },
+        { id: '3', name: "Товар 3", price: 3000 },
+        { id: '4', name: "Товар 4", price: 4000 },
+        { id: '5', name: "Товар 5", price: 5000 },
       ],
     }));
   }
@@ -74,7 +74,7 @@ export default class Products extends PureComponent {
       products: [
         ...prevState.products,
         {
-          id: prevState.products[prevState.products.length - 1].id + 1,
+          id: +prevState.products[prevState.products.length - 1].id + 1,
           name,
           price,
         },
